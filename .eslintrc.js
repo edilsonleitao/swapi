@@ -34,6 +34,7 @@ module.exports = {
   rules: {
     'no-param-reassign': 'off',
     'space-before-function-paren': 'off',
+    'object-curly-newline': 'off',
     'import/first': 'off',
     'import/named': 'error',
     'import/namespace': 'error',
