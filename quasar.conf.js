@@ -1,16 +1,11 @@
-module.exports = function (/* ctx */) {
+const { Notify } = require('quasar');
+
+module.exports = function(/* ctx */) {
   return {
     supportTS: false,
-    boot: [
-      'axios',
-    ],
-    css: [
-      'app.sass',
-    ],
-    extras: [
-      'roboto-font',
-      'material-icons',
-    ],
+    boot: [],
+    css: ['app.sass'],
+    extras: ['roboto-font', 'material-icons'],
     build: {
       vueRouterMode: 'hash',
       extendWebpack(cfg) {
@@ -32,7 +27,7 @@ module.exports = function (/* ctx */) {
       lang: 'en-us',
       config: {},
       importStrategy: 'auto',
-      plugins: [],
+      plugins: ['Notify'],
     },
     animations: [],
     ssr: {
@@ -78,21 +73,18 @@ module.exports = function (/* ctx */) {
         ],
       },
     },
-    cordova: {
-    },
+    cordova: {},
     capacitor: {
       hideSplashscreen: true,
     },
     electron: {
       bundler: 'packager',
-      packager: {
-      },
+      packager: {},
       builder: {
         appId: 'swapi',
       },
       nodeIntegration: true,
-      extendWebpack(/* cfg */) {
-      },
+      extendWebpack(/* cfg */) {},
     },
   };
 };
