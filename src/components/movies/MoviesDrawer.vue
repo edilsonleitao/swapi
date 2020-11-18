@@ -15,7 +15,7 @@
         <q-btn flat color="white" rounded icon="clear" @click="$emit('input', null)"
       /></q-card-section>
       <q-card-section>
-        <div class="title">{{ name }}</div>
+        <div class="title">{{ title }}</div>
         <q-separator class="separator" dark />
       </q-card-section>
     </q-card>
@@ -32,8 +32,8 @@ export default {
     return { drawerWidth: 500 };
   },
   computed: {
-    name() {
-      return this.value && this.value.name;
+    title() {
+      return this.value && this.value.title;
     },
   },
   methods: {
