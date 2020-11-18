@@ -21,6 +21,9 @@
       <q-tab-panel name="Planets">
         <planets-view />
       </q-tab-panel>
+      <q-tab-panel name="Starships">
+        <starships-view />
+      </q-tab-panel>
     </q-tab-panels>
   </q-page>
 </template>
@@ -30,10 +33,11 @@ import { createNamespacedHelpers } from 'vuex';
 import CharactersView from '../components/characters/CharactersView';
 import SpeciesView from '../components/species/SpeciesView';
 import PlanetsView from '../components/planets/PlanetsView';
+import StarshipsView from '../components/starships/StarshipsView';
 
 const { mapGetters } = createNamespacedHelpers('menu');
 export default {
-  components: { CharactersView, SpeciesView, PlanetsView },
+  components: { CharactersView, SpeciesView, PlanetsView, StarshipsView },
   computed: {
     ...mapGetters(['menuOption']),
   },
