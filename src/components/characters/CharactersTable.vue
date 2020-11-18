@@ -4,6 +4,7 @@
     :columns="columns"
     rowKey="name"
     @selected-page="setPage"
+    @selected-row="$emit('selected-row', $event)"
     :loading="loading"
     :page="page"
   />

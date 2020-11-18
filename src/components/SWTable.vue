@@ -12,6 +12,7 @@
       flat
       hide-pagination
       :loading="loading"
+      @row-click="emitSelectedItem"
     />
     <div class="row justify-center q-mt-md">
       <q-pagination
@@ -52,6 +53,9 @@ export default {
   methods: {
     emitSelectedPage(pageNumber) {
       this.$emit('selected-page', pageNumber);
+    },
+    emitSelectedItem(evt, row) {
+      this.$emit('selected-row', row);
     },
   },
   computed: {
