@@ -26,18 +26,21 @@ export default {
           name: 'name',
           field: 'name',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Climate',
           name: 'climate',
           field: 'climate',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Terrain',
           name: 'terrain',
           field: 'terrain',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Population',

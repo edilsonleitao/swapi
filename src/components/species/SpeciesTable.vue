@@ -26,18 +26,21 @@ export default {
           name: 'name',
           field: 'name',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Classification',
           name: 'classification',
           field: 'classification',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Language',
           name: 'language',
           field: 'language',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Average Height',

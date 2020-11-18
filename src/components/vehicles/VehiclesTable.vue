@@ -26,24 +26,28 @@ export default {
           name: 'name',
           field: 'name',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'model',
           name: 'model',
           field: 'model',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Class',
           name: 'vehicle_class',
           field: 'vehicle_class',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Credits',
           name: 'cost_in_credits',
           field: 'cost_in_credits',
           align: 'center',
+          sortable: true,
         },
         {
           label: 'Movies',
