@@ -1,5 +1,11 @@
 <template>
-  <q-drawer :value="leftDrawerState" @input="toggleLeftDrawerState" content-class="bg-grey-9">
+  <q-drawer
+    :value="leftDrawerState"
+    @input="closeDrawer"
+    content-class="bg-grey-9"
+    elevated
+    ref="mainDrawer"
+  >
     <q-list>
       <q-item-label header>
         <div class="title flex flex-center">S W A P I</div>
@@ -32,7 +38,6 @@ export default {
   components: { MenuItem },
   data() {
     return {
-      drawerWidth: 375,
       menuItems: [
         { name: 'Home', icon: 'home' },
         { name: 'Characters', icon: 'person' },
@@ -49,12 +54,11 @@ export default {
   },
   methods: {
     ...mapMutations(['toggleLeftDrawerState', 'setMenuOption']),
-    onDrawerResize() {
-      this.drawerWidth = this.$q.screen.width <= 375 ? this.$q.screen.width - 25 : 375;
+    closeDrawer() {
+      if (this.$refs.mainDrawer.value) {
+        this.toggleLeftDrawerState();
+      }
     },
-  },
-  mounted() {
-    this.onDrawerResize();
   },
 };
 </script>
