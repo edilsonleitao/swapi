@@ -10,7 +10,7 @@
       class="tabs-container text-white"
     >
       <q-tab-panel name="Home">
-        <home />
+        <home-view />
       </q-tab-panel>
       <q-tab-panel name="Characters">
         <characters-view />
@@ -42,7 +42,7 @@ import PlanetsView from '../components/planets/PlanetsView';
 import StarshipsView from '../components/starships/StarshipsView';
 import VehiclesView from '../components/vehicles/VehiclesView';
 import MoviesView from '../components/movies/MoviesView';
-import HomeComponent from '../components/HomeComponent';
+import HomeView from '../components/HomeView';
 
 const { mapGetters } = createNamespacedHelpers('menu');
 export default {
@@ -53,7 +53,7 @@ export default {
     StarshipsView,
     VehiclesView,
     MoviesView,
-    home: HomeComponent,
+    HomeView,
   },
   computed: {
     ...mapGetters(['menuOption']),
