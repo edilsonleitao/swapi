@@ -33,6 +33,7 @@ export default {
           name: 'gender',
           field: 'gender',
           align: 'left',
+          format: (value) => value[0].toUpperCase() + value.substring(1),
           sortable: true,
         },
         {
