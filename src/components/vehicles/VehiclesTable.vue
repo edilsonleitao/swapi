@@ -46,7 +46,7 @@ export default {
           align: 'center',
         },
         {
-          label: 'Films',
+          label: 'Movies',
           name: 'films',
           field: 'films',
           align: 'right',

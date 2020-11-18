@@ -3,7 +3,7 @@
     <div class="title">Vehicles</div>
     <q-separator class="separator" dark />
     <div class="count">{{ count }} Results</div>
-    <vehicles-table @selected-row="setVehicles" />
+    <vehicles-table @selected-row="setVehicle" />
     <vehicles-drawer v-model="vehicle" />
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     ...mapGetters(['count']),
   },
   methods: {
-    setVehicles(vehicle) {
+    setVehicle(vehicle) {
       this.vehicle = vehicle;
     },
   },

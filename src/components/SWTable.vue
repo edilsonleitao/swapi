@@ -17,6 +17,7 @@
     />
     <div class="row justify-center q-mt-md">
       <q-pagination
+        v-if="pages > 1"
         :value="page"
         :max="pages"
         color="white"

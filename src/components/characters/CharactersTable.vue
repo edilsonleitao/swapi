@@ -52,13 +52,7 @@ export default {
           field: 'mass',
           align: 'right',
         },
-        {
-          label: 'Films',
-          name: 'films',
-          field: 'films',
-          align: 'right',
-          format: (value) => value && value.length,
-        },
+
         {
           label: 'Vehicles',
           name: 'vehicles',
@@ -70,6 +64,13 @@ export default {
           label: 'Starships',
           name: 'starships',
           field: 'starships',
+          align: 'right',
+          format: (value) => value && value.length,
+        },
+        {
+          label: 'Movies',
+          name: 'films',
+          field: 'films',
           align: 'right',
           format: (value) => value && value.length,
         },

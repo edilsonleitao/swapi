@@ -13,7 +13,7 @@
 <script>
 import { createNamespacedHelpers } from 'vuex';
 
-const { mapGetters, mapActions } = createNamespacedHelpers('species');
+const { mapGetters, mapActions } = createNamespacedHelpers('movies');
 import SWTable from '../SWTable';
 
 export default {
@@ -22,46 +22,54 @@ export default {
     return {
       columns: [
         {
-          label: 'Name',
-          name: 'name',
-          field: 'name',
+          label: 'Episode',
+          name: 'episode_id',
+          field: 'episode_id',
           align: 'left',
         },
         {
-          label: 'Classification',
-          name: 'classification',
-          field: 'classification',
+          label: 'Title',
+          name: 'title',
+          field: 'title',
           align: 'left',
         },
         {
-          label: 'Language',
-          name: 'language',
-          field: 'language',
+          label: 'Director',
+          name: 'director',
+          field: 'director',
           align: 'left',
         },
         {
-          label: 'Average Height',
-          name: 'average_height',
-          field: 'average_height',
+          label: 'Release Date',
+          name: 'release_date',
+          field: 'release_date',
           align: 'center',
         },
         {
-          label: 'Average Lifespan',
-          name: 'average_lifespan',
-          field: 'average_lifespan',
-          align: 'right',
-        },
-        {
-          label: 'People',
-          name: 'people',
-          field: 'people',
+          label: 'Characters',
+          name: 'characters',
+          field: 'characters',
           align: 'right',
           format: (value) => value && value.length,
         },
         {
-          label: 'Movies',
-          name: 'films',
-          field: 'films',
+          label: 'Starships',
+          name: 'starships',
+          field: 'starships',
+          align: 'right',
+          format: (value) => value && value.length,
+        },
+        {
+          label: 'Vehicles',
+          name: 'vehicles',
+          field: 'vehicles',
+          align: 'right',
+          format: (value) => value && value.length,
+        },
+        {
+          label: 'Planets',
+          name: 'planets',
+          field: 'planets',
           align: 'right',
           format: (value) => value && value.length,
         },

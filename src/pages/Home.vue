@@ -27,6 +27,9 @@
       <q-tab-panel name="Vehicles">
         <vehicles-view />
       </q-tab-panel>
+      <q-tab-panel name="Movies">
+        <movies-view />
+      </q-tab-panel>
     </q-tab-panels>
   </q-page>
 </template>
@@ -38,10 +41,11 @@ import SpeciesView from '../components/species/SpeciesView';
 import PlanetsView from '../components/planets/PlanetsView';
 import StarshipsView from '../components/starships/StarshipsView';
 import VehiclesView from '../components/vehicles/VehiclesView';
+import MoviesView from '../components/movies/MoviesView';
 
 const { mapGetters } = createNamespacedHelpers('menu');
 export default {
-  components: { CharactersView, SpeciesView, PlanetsView, StarshipsView, VehiclesView },
+  components: { CharactersView, SpeciesView, PlanetsView, StarshipsView, VehiclesView, MoviesView },
   computed: {
     ...mapGetters(['menuOption']),
   },

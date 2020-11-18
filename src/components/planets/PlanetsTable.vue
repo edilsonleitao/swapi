@@ -53,7 +53,7 @@ export default {
           format: (value) => value && value.length,
         },
         {
-          label: 'Films',
+          label: 'Movies',
           name: 'films',
           field: 'films',
           align: 'right',

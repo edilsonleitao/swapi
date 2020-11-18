@@ -3,7 +3,7 @@
     <div class="title">Starships</div>
     <q-separator class="separator" dark />
     <div class="count">{{ count }} Results</div>
-    <starships-table @selected-row="setStarships" />
+    <starships-table @selected-row="setStarship" />
     <starships-drawer v-model="startship" />
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     ...mapGetters(['count']),
   },
   methods: {
-    setStarships(startship) {
+    setStarship(startship) {
       this.startship = startship;
     },
   },
