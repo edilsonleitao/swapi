@@ -2,7 +2,7 @@
   <sw-table
     :data="results"
     :columns="columns"
-    rowKey="name"
+    rowKey="episode_id"
     @selected-page="setPage"
     @selected-row="$emit('selected-row', $event)"
     :loading="loading"
@@ -26,24 +26,28 @@ export default {
           name: 'episode_id',
           field: 'episode_id',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Title',
           name: 'title',
           field: 'title',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Director',
           name: 'director',
           field: 'director',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Release Date',
           name: 'release_date',
           field: 'release_date',
           align: 'center',
+          sortable: true,
         },
         {
           label: 'Characters',

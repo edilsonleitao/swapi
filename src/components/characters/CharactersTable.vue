@@ -26,31 +26,36 @@ export default {
           name: 'name',
           field: 'name',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Gender',
           name: 'gender',
           field: 'gender',
           align: 'left',
+          sortable: true,
         },
         {
           label: 'Birth Year',
           name: 'birth_year',
           field: 'birth_year',
           align: 'left',
+          sortable: true,
         },
         {
-          label: 'Height',
+          label: 'Height (m)',
           name: 'height',
           field: 'height',
           align: 'center',
-          format: (value) => `${value / 100} m`,
+          format: (value) => value / 100,
+          sortable: true,
         },
         {
           label: 'Mass (Kg)',
           name: 'mass',
           field: 'mass',
           align: 'right',
+          sortable: true,
         },
 
         {

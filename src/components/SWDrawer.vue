@@ -64,6 +64,9 @@ export default {
       this.setMenuOption(value);
     },
   },
+  mounted() {
+    if (this.$q.screen.sm || this.$q.screen.xs) this.toggleLeftDrawerState();
+  },
 };
 </script>
 <style lang="sass" scoped>
