@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <q-table
-      :title="title"
       :data="data"
       :columns="columns"
       :row-key="rowKey"
@@ -12,19 +11,19 @@
       table-header-class="text-white"
       flat
       hide-pagination
+      :loading="loading"
+      @row-click="emitSelectedItem"
+      :pagination.sync="pagination"
     />
     <div class="row justify-center q-mt-md">
       <q-pagination
-        v-model="pagination.page"
+        v-if="pages > 1"
+        :value="page"
+        :max="pages"
         color="white"
         text-color="grey-9"
-        :max="pagesNumber"
-        :direction-links="true"
-        :boundary-links="true"
-        icon-first="skip_previous"
-        icon-last="skip_next"
-        icon-prev="fast_rewind"
-        icon-next="fast_forward"
+        :disable="disablePagination"
+        @input="emitSelectedPage"
       />
     </div>
   </div>
@@ -32,9 +31,6 @@
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-    },
     data: {
       type: Array,
       required: true,
@@ -47,12 +43,38 @@ export default {
       type: String,
       required: true,
     },
+    loading: {
+      type: Boolean,
+      default: () => false,
+    },
+    page: {
+      type: Number,
+      required: true,
+    },
+    pages: {
+      type: Number,
+      required: true,
+    },
   },
   data() {
     return {
-      pagination: { page: 1 },
-      pagesNumber: 5,
+      pagination: {
+        rowsPerPage: 10,
+      },
     };
+  },
+  methods: {
+    emitSelectedPage(pageNumber) {
+      this.$emit('selected-page', pageNumber);
+    },
+    emitSelectedItem(evt, row) {
+      this.$emit('selected-row', row);
+    },
+  },
+  computed: {
+    disablePagination() {
+      return !this.data || !this.data.length;
+    },
   },
 };
 </script>
