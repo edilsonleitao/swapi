@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 
 import menu from './menu';
 import characters from './characters';
+import species from './species';
 
 Vue.use(Vuex);
 
@@ -11,6 +12,7 @@ export default function() {
     modules: {
       menu,
       characters,
+      species,
     },
     strict: process.env.DEBUGGING,
   });

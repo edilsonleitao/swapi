@@ -13,11 +13,12 @@
       hide-pagination
       :loading="loading"
       @row-click="emitSelectedItem"
+      :pagination.sync="pagination"
     />
     <div class="row justify-center q-mt-md">
       <q-pagination
         :value="page"
-        :max="9"
+        :max="pages"
         color="white"
         text-color="grey-9"
         :disable="disablePagination"
@@ -49,6 +50,17 @@ export default {
       type: Number,
       required: true,
     },
+    pages: {
+      type: Number,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      pagination: {
+        rowsPerPage: 10,
+      },
+    };
   },
   methods: {
     emitSelectedPage(pageNumber) {

@@ -15,8 +15,8 @@
       <q-tab-panel name="Characters">
         <characters-view />
       </q-tab-panel>
-      <q-tab-panel name="innerQwe">
-        <p>Qwe</p>
+      <q-tab-panel name="Species">
+        <species-view />
       </q-tab-panel>
     </q-tab-panels>
   </q-page>
@@ -25,10 +25,11 @@
 <script>
 import { createNamespacedHelpers } from 'vuex';
 import CharactersView from '../components/characters/CharactersView';
+import SpeciesView from '../components/species/SpeciesView';
 
 const { mapGetters } = createNamespacedHelpers('menu');
 export default {
-  components: { CharactersView },
+  components: { CharactersView, SpeciesView },
   computed: {
     ...mapGetters(['menuOption']),
   },
