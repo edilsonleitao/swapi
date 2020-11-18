@@ -28,21 +28,13 @@ export default {
       type: Object,
     },
   },
-  data() {
-    return { drawerWidth: 500 };
-  },
   computed: {
     name() {
       return this.value && this.value.name;
     },
-  },
-  methods: {
-    onDrawerResize() {
-      this.drawerWidth = this.$q.screen.width <= 375 ? this.$q.screen.width - 25 : 500;
+    drawerWidth() {
+      return this.$q.screen.width <= 500 ? this.$q.screen.width - 25 : 500;
     },
-  },
-  mounted() {
-    this.onDrawerResize();
   },
 };
 </script>
