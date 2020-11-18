@@ -40,12 +40,12 @@ export default {
     return {
       menuItems: [
         { name: 'Home', icon: 'home' },
+        { name: 'Movies', icon: 'theaters' },
         { name: 'Characters', icon: 'person' },
-        { name: 'Species', icon: 'adb' },
         { name: 'Planets', icon: 'flare' },
         { name: 'Starships', icon: 'airplanemode_active' },
+        { name: 'Species', icon: 'adb' },
         { name: 'Vehicles', icon: 'airport_shuttle' },
-        { name: 'Movies', icon: 'theaters' },
       ],
     };
   },

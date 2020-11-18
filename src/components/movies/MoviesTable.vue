@@ -47,6 +47,7 @@ export default {
           name: 'release_date',
           field: 'release_date',
           align: 'center',
+          format: (value) => new Date(value).toLocaleDateString(),
           sortable: true,
         },
         {
