@@ -13,7 +13,7 @@
 <script>
 import { createNamespacedHelpers } from 'vuex';
 
-const { mapGetters, mapActions } = createNamespacedHelpers('characters');
+const { mapGetters, mapActions } = createNamespacedHelpers('species');
 import SWTable from '../SWTable';
 
 export default {
@@ -28,48 +28,40 @@ export default {
           align: 'left',
         },
         {
-          label: 'Gender',
-          name: 'gender',
-          field: 'gender',
+          label: 'Classification',
+          name: 'classification',
+          field: 'classification',
           align: 'left',
         },
         {
-          label: 'Birth Year',
-          name: 'birth_year',
-          field: 'birth_year',
+          label: 'Language',
+          name: 'language',
+          field: 'language',
           align: 'left',
         },
         {
-          label: 'Height',
-          name: 'height',
-          field: 'height',
+          label: 'Average Height',
+          name: 'average_height',
+          field: 'average_height',
           align: 'center',
-          format: (value) => `${value / 100} m`,
         },
         {
-          label: 'Mass (Kg)',
-          name: 'mass',
-          field: 'mass',
+          label: 'Average Lifespan',
+          name: 'average_lifespan',
+          field: 'average_lifespan',
           align: 'right',
+        },
+        {
+          label: 'People',
+          name: 'people',
+          field: 'people',
+          align: 'right',
+          format: (value) => value && value.length,
         },
         {
           label: 'Films',
           name: 'films',
           field: 'films',
-          align: 'right',
-          format: (value) => value && value.length,
-        },
-        {
-          label: 'Vehicles',
-          name: 'vehicles',
-          field: 'vehicles',
-          align: 'right',
-          format: (value) => value && value.length,
-        },
-        {
-          label: 'Starships',
-          name: 'starships',
-          field: 'starships',
           align: 'right',
           format: (value) => value && value.length,
         },
