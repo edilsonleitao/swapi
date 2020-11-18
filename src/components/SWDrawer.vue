@@ -43,7 +43,7 @@ export default {
         { name: 'Characters', icon: 'person' },
         { name: 'Species', icon: 'adb' },
         { name: 'Planets', icon: 'flare' },
-        { name: 'Startships', icon: 'airplanemode_active' },
+        { name: 'Starships', icon: 'airplanemode_active' },
         { name: 'Vehicles', icon: 'airport_shuttle' },
         { name: 'Movies', icon: 'theaters' },
       ],
