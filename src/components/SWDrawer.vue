@@ -13,7 +13,7 @@
       <q-item-label>
         <q-tabs
           :value="menuOption"
-          @input="setMenuOption"
+          @input="handleSelectOption"
           vertical
           active-bg-color="grey-8"
           indicator-color="grey-8"
@@ -58,6 +58,10 @@ export default {
       if (this.$refs.mainDrawer.value) {
         this.toggleLeftDrawerState();
       }
+    },
+    handleSelectOption(value) {
+      if (this.$q.screen.sm || this.$q.screen.xs) this.toggleLeftDrawerState();
+      this.setMenuOption(value);
     },
   },
 };
