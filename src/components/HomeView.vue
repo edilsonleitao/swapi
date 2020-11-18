@@ -57,9 +57,20 @@
       </q-card-section>
       <q-card-section>
         The project has 3 main functionalities:<br />
-        <b>1. A left side menu.</b><br />
-        <b>2. A table with the selected records with pagination.</b><br />
-        <b>3. A right side drawer with more details about selected record.</b><br />
+        <b>
+          1. A left side menu where you can select movies, characters, planets, starships, species
+          and vehicles included in the franchise's canon films.
+        </b>
+        <br />
+        <b>
+          2. Once you select a option in menu, you can se a responsive table with the records of
+          selected menu item with pagination.
+        </b>
+        <br />
+        <b
+          >3. Selecting a specific record on the table, you can see a right side drawer with more
+          details about selected record.</b
+        ><br />
       </q-card-section>
       <q-card-section class="row flex-center q-gutter-md">
         <q-img
