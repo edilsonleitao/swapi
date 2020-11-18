@@ -3,7 +3,7 @@
     <div class="title">Planets</div>
     <q-separator class="separator" dark />
     <div class="count">{{ count }} Results</div>
-    <planets-table @selected-row="setPlanets" />
+    <planets-table @selected-row="setPlanet" />
     <planets-drawer v-model="planet" />
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
     ...mapGetters(['count']),
   },
   methods: {
-    setPlanets(planet) {
+    setPlanet(planet) {
       this.planet = planet;
     },
   },

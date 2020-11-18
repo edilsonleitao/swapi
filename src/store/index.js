@@ -7,6 +7,7 @@ import species from './species';
 import planets from './planets';
 import starships from './starships';
 import vehicles from './vehicles';
+import movies from './movies';
 
 Vue.use(Vuex);
 
@@ -19,6 +20,7 @@ export default function() {
       planets,
       starships,
       vehicles,
+      movies,
     },
     strict: process.env.DEBUGGING,
   });
