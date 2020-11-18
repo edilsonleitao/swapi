@@ -1,12 +1,13 @@
 const { Notify } = require('quasar');
 
-module.exports = function(/* ctx */) {
+module.exports = function(ctx) {
   return {
     supportTS: false,
     boot: [],
     css: ['app.sass'],
     extras: ['roboto-font', 'material-icons'],
     build: {
+      distDir: ctx.mode.spa ? 'public' : null,
       vueRouterMode: 'hash',
       extendWebpack(cfg) {
         cfg.module.rules.push({
